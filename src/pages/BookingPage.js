@@ -1,4 +1,4 @@
-import BookingForm from "./BookingForm";
+import BookingForm from "../components/BookingForm";
 
 const BookingPage = (props) => {
   return (

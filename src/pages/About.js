@@ -1,6 +1,6 @@
 import chicagoImage from "../assets/images/history.png";
 
-const Chicago = () => {
+const About = () => {
   return (
     <section className="call-to-action light">
       <div className="container">
@@ -31,4 +31,4 @@ const Chicago = () => {
   );
 };
 
-export default Chicago;
+export default About;

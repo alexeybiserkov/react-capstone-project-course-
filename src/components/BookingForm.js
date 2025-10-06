@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from "react";
 
 const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
-  // Get today's date in YYYY-MM-DD format
   const today = new Date().toISOString().split("T")[0];
 
-  // Set today's date as the initial state
   const [date, setDate] = useState(today);
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
 
+  // Pre-select the first available time when the list of times changes.
   useEffect(() => {
     if (availableTimes && availableTimes.length > 0) {
       setTime(availableTimes[0]);
     }
   }, [availableTimes]);
 
-  const isFormValid = () => {
-    return date && time && guests >= 1 && guests <= 10;
-  };
+  const isFormValid = date && time && guests >= 1 && guests <= 10;
 
   const handleDateChange = (e) => {
     const newDate = e.target.value;
@@ -30,7 +27,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!isFormValid()) {
+    if (!isFormValid) {
       return;
     }
     submitForm({ date, time, guests, occasion });
@@ -47,7 +44,6 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             value={date}
             onChange={handleDateChange}
             required
-            // Prevent selecting a date in the past
             min={today}
           />
         </fieldset>
@@ -104,7 +100,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             type="submit"
             value="Make Your reservation"
             aria-label="On Click"
-            disabled={!isFormValid()}
+            disabled={!isFormValid}
           />
         </div>
       </form>

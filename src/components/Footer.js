@@ -1,4 +1,5 @@
 import footerImg from "../assets/images/footer.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -10,56 +11,55 @@ export default function Footer() {
           </div>
           <div className="footer-content flex-row space-between gap-20">
             <div className="footer-nav">
-              <p className="footer-head">Navigtion</p>
+              <p className="footer-head">Navigation</p>
               <ul className="footer-list">
                 <li>
-                  <a href="/" className="footer-item">
+                  <Link to="/" className="footer-item">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="footer-item">
+                  <Link to="/about" className="footer-item">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="footer-item">
+                  <Link to="/comming-soon" className="footer-item">
                     Menu
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/" className="footer-item">
+                  <Link to="/booking" className="footer-item">
                     Reservations
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="footer-item">
+                  <Link to="/comming-soon" className="footer-item">
                     Order Online
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="footer-item">
+                  <Link to="/comming-soon" className="footer-item">
                     Login
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="footer-contact">
               <p className="footer-head">Contact</p>
               <ul className="footer-list">
+                <li className="footer-item">123 Lemon St, Chicago, IL</li>
                 <li>
-                  <a href="#" className="footer-item">
-                    Address
+                  <a href="tel:+11234567890" className="footer-item">
+                    (123) 456-7890
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="footer-item">
-                    Phone Number
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="footer-item">
-                    Email
+                  <a
+                    href="mailto:contact@littlelemon.com"
+                    className="footer-item"
+                  >
+                    contact@littlelemon.com
                   </a>
                 </li>
               </ul>
@@ -68,24 +68,42 @@ export default function Footer() {
               <p className="footer-head">Social Media</p>
               <ul className="footer-list">
                 <li>
-                  <a href="#" className="footer-item">
+                  <a
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-item"
+                  >
                     Facebook
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="footer-item">
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-item"
+                  >
                     Instagram
                   </a>
                 </li>
                 <li>
-                  {" "}
-                  <a href="#" className="footer-item">
+                  <a
+                    href="https://www.tiktok.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-item"
+                  >
                     TikTok
                   </a>
                 </li>
                 <li>
-                  {" "}
-                  <a href="#" className="footer-item">
+                  <a
+                    href="https://www.twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-item"
+                  >
                     Twitter
                   </a>
                 </li>

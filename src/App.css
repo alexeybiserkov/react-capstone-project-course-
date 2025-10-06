@@ -45,6 +45,13 @@ section {
   color: #fff;
 }
 
+.btn-primary:disabled {
+  background: #000;
+  color: #fff;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 label {
   font-size: 18px;
   font-weight: bold;
@@ -72,6 +79,11 @@ select {
   background-repeat: no-repeat;
   background-size: 20px;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fff"><path fill="transparent" d="M4 8h16l-8 9-8-9z"/><path d="M20.71 8.29a1 1 0 0 0-1.41 0l-7.29 7.29-7.29-7.29A.996 .996 0 1 0 3.31 9.7l8 8c.2.2.45.29.71.29s.51-.1.71-.29l8-8a1 1 0 0 0 0-1.41Z"/></svg>');
+}
+
+select:empty {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 form {

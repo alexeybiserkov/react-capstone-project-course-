@@ -34,11 +34,12 @@ function Nav() {
         <li>
           <Link to="/about">About</Link>
         </li>
-        <li>
-          <Link to="/comming-soon">Menu</Link>
-        </li>
+
         <li>
           <Link to="/booking">Reservations</Link>
+        </li>
+        <li>
+          <Link to="/comming-soon">Menu</Link>
         </li>
         <li>
           <Link to="/comming-soon">Order online</Link>

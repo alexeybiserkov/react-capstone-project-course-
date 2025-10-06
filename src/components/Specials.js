@@ -2,6 +2,7 @@ import salad from "../assets/images/greek_salad.jpg";
 import bruchetta from "../assets/images/bruchetta.svg";
 import dessert from "../assets/images/lemon_dessert.jpg";
 import deliveryIcon from "../assets/icons/delivery.svg";
+import { Link, useNavigate } from "react-router-dom";
 
 // Data for all three special items
 const specialsData = [
@@ -32,6 +33,11 @@ const specialsData = [
 ];
 
 const Specials = () => {
+  const navigate = useNavigate();
+
+  const handleOrder = () => {
+    navigate("/comming-soon");
+  };
   return (
     // Use <section> for thematic grouping
     <section className="specials-section">
@@ -39,9 +45,9 @@ const Specials = () => {
         <div className="specials-title-group flex-row space-between align-center gap-20">
           <h2>Specials</h2>
           {/* Use <a> for navigation to an external or full menu page */}
-          <a href="/menu" className="btn-primary">
+          <Link to="/comming-soon" className="btn-primary">
             Online Menu
-          </a>
+          </Link>
         </div>
 
         {/* Use <ul> to clearly define a list of items (dishes) */}
@@ -68,6 +74,7 @@ const Specials = () => {
 
                 {/* Accessible button for ordering */}
                 <button
+                  onClick={handleOrder}
                   // ARIA-label is read by screen readers instead of the button content
                   aria-label={`Order a delivery: ${item.name}`}
                 >

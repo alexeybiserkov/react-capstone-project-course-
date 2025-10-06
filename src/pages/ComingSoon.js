@@ -1,11 +1,11 @@
-const CommingSoon = () => {
+const ComingSoon = () => {
   return (
     <section>
       <div className="container">
-        <h1>Comming Soon</h1>
+        <h1>Coming Soon</h1>
       </div>
     </section>
   );
 };
 
-export default CommingSoon;
+export default ComingSoon;
