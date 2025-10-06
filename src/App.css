@@ -45,6 +45,56 @@ section {
   color: #fff;
 }
 
+label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+select,
+input:not([type="radio"], [type="checkbox"], [type="submit"]) {
+  margin: 0;
+  font-size: 18px;
+  border-radius: 16px;
+  padding: 1em 2em;
+  background-color: #495e57;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  color-scheme: dark;
+}
+
+select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background-position: calc(100% - 40px) center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fff"><path fill="transparent" d="M4 8h16l-8 9-8-9z"/><path d="M20.71 8.29a1 1 0 0 0-1.41 0l-7.29 7.29-7.29-7.29A.996 .996 0 1 0 3.31 9.7l8 8c.2.2.45.29.71.29s.51-.1.71-.29l8-8a1 1 0 0 0 0-1.41Z"/></svg>');
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+  border: none;
+}
+
+@media screen and (min-width: 767px) {
+  fieldset {
+    width: calc(50% - 20px);
+  }
+}
+
 #root {
   display: flex;
   flex-direction: column;
