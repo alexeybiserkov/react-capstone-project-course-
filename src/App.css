@@ -424,6 +424,16 @@ fieldset {
   cursor: pointer;
 }
 
+@media screen and (max-width: 992px) {
+  .testimonials-list {
+    flex-wrap: wrap;
+  }
+
+  .testimonial-item {
+    width: calc(50% - 20px);
+  }
+}
+
 @media screen and (max-width: 767px) {
   .flex-row {
     flex-direction: column;
@@ -501,5 +511,17 @@ fieldset {
 
   .main-nav-list.is-visible {
     transform: translateX(0);
+  }
+
+  .testimonial-item,
+  .specials-item > img,
+  .specials-item,
+  .call-to-action-content,
+  .call-to-action-image {
+    width: 100%;
+  }
+
+  .specials-items-list {
+    flex-direction: column;
   }
 }

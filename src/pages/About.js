@@ -6,9 +6,9 @@ const About = () => {
       <div className="container">
         <div className="call-to-action-row flex-row space-between align-center gap-20">
           <div className="call-to-action-content">
-            <h1>
+            <h2>
               Little Lemon <small>Chicago</small>
-            </h1>
+            </h2>
             <p>
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.

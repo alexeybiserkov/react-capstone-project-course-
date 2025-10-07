@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import BookingForm from "./BookingForm";
+import BookingForm from "./components/BookingForm";
 
 // Mock functions
 const mockDispatch = jest.fn();
